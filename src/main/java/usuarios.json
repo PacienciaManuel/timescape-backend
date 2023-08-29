@@ -1,0 +1,658 @@
+[
+	{
+		"nome": "Manuel Isaac",
+		"genero": "Masculino",
+	    "dataNascimento":"1998-06-22",
+		"email": "manuelisaacialberto@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Ana Maria",
+		"genero": "Feminino",
+	    "dataNascimento":"2001-04-06",
+		"email": "anamaria@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Rita Mulato",
+		"genero": "Feminino",
+	    "dataNascimento":"2002-08-12",
+		"email": "ritamulato@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Margarida Amaro",
+		"genero": "Feminino",
+		"email": "margaridaamaro@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Venacio Chicala",
+		"genero": "Masculino",
+		"email": "venaciochicala@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Adelina Miguel",
+		"genero": "Feminino",
+		"email": "adelinamiguel@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Adelino Miguel",
+		"genero": "Masculino",
+		"email": "adelinomiguel@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Ator Godino",
+		"genero": "Masculino",
+		"email": "atorgodinho@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Cacoma Chissola",
+		"genero": "Masculino",
+		"email": "cacomachissola@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Estefânia da Silva",
+		"genero": "Feminino",
+		"email": "estefaniasilva@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Fernando Castro",
+		"genero": "Masculino",
+		"email": "fernandocastro@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Filipe António",
+		"genero": "Masculino",
+		"email": "filipeantonio@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Garcia",
+		"genero": "Masculino",
+		"email": "garcia@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Geovana Viera",
+		"genero": "Feminino",
+		"email": "geovanaviera@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Gideão Chissola",
+		"genero": "Masculino",
+		"email": "gideaochissola@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "João Sardinha",
+		"genero": "Masculino",
+		"email": "joaosardinha@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Jorge Costa",
+		"genero": "Masculino",
+		"email": "jorgecosta@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "José Pedro Hebo",
+		"genero": "Masculino",
+		"email": "josepedrohebo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "José Wamana",
+		"genero": "Masculino",
+		"email": "josewamana@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Teresa Augusto",
+		"genero": "Feminino",
+		"email": "teresaaugusto@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Octair Bernardino",
+		"genero": "Masculino",
+		"email": "octairbernardino@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Diana Pedro Hebo",
+		"genero": "Feminino",
+		"email": "dianapedrohebo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Marlene Pedro Hebo",
+		"genero": "Feminino",
+		"email": "marlenepedrohebo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Biatriz Pedro Hebo",
+		"genero": "Feminino",
+		"email": "biatrizpedrohebo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Adelaide Abrão Upale Alberto",
+		"genero": "Feminino",
+		"email": "adelaideabraoupalealberto@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Mikana Upale Alberto",
+		"genero": "Feminino",
+		"email": "mikanaupalealberto@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Isaias Miguel",
+		"genero": "Masculino",
+		"email": "isaiasmiguel@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Lourenço Tchiuka",
+		"genero": "Masculino",
+		"email": "lourençotchiuka@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Neves Tchiuka",
+		"genero": "Masculino",
+		"email": "nevestchiuka@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Domingos Wassamba Samilonga",
+		"genero": "Masculino",
+		"email": "domingoswassambasamilonga@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Obede Pedro Hebo",
+		"genero": "Masculino",
+		"email": "obedepedrohebo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Francisco Afonso",
+		"genero": "Masculino",
+		"email": "franciscoafonso@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Márcio Manuel Morais",
+		"genero": "Masculino",
+		"email": "marciomanuelmorais@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Jóse António",
+		"genero": "Masculino",
+		"email": "joseantonio@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Josimar Manuel Magalhaês",
+		"genero": "Masculino",
+		"email": "josimarmanuel@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Piter Pina Mendez",
+		"genero": "Masculino",
+		"email": "piterpinamendez@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Rosa Mecheque",
+		"genero": "Feminino",
+		"email": "rosamecheque@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Paulina António",
+		"genero": "Feminino",
+		"email": "paulinaantonio@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Isabel Conseição",
+		"genero": "Feminino",
+		"email": "isabelconseicao@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Lindafrica Pereira",
+		"genero": "Feminino",
+		"email": "lindafricapereira@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Netolas",
+		"genero": "Masculino",
+		"email": "netolas@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Sérgio Mussopa",
+		"genero": "Masculino",
+		"email": "sergiomussopa@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Sérgio Cassoca",
+		"genero": "Masculino",
+		"email": "sergiocassoca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Esperança Davoca",
+		"genero": "Feminino",
+		"email": "esperancadavoca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Rafa Chissoola",
+		"genero": "Masculino",
+		"email": "rafachissoola@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Raimundo Rai-G",
+		"genero": "Masculino",
+		"email": "raimundo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Santiago Agostinho",
+		"genero": "Masculino",
+		"email": "santiagoagostinho@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Dinho Bernardino",
+		"genero": "Masculino",
+		"email": "bernardino@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Saní Pedro Hebo",
+		"genero": "Feminino",
+		"email": "sanipedrohebo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Neusa Fininha",
+		"genero": "Feminino",
+		"email": "neusafininha@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Rebeca Abrão Alberto",
+		"genero": "Feminino",
+		"email": "rebecaabraoalberto@gmail.com",
+	    "senha":"12345678"
+	},	
+	{
+		"nome": "Gilberto",
+		"genero": "Masculino",
+		"email": "gilberto@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Marcolino",
+		"genero": "Masculino",
+		"email": "marcolino@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Mbele Tanks",
+		"genero": "Masculino",
+		"email": "mbeletanks@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Bernardino (UCAN)",
+		"genero": "Masculino",
+		"email": "bernardinoucan@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Victor Lituai",
+		"genero": "Masculino",
+		"email": "victorlituai@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Lourenço Tchiyuca",
+		"genero": "Masculino",
+		"email": "lourençotchiyuca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Elder",
+		"genero": "Masculino",
+		"email": "elder@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Agostinho",
+		"genero": "Masculino",
+		"email": "agostinho@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Vitó (Tinha Minga)",
+		"genero": "Masculino",
+		"email": "vito@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Bruno Vick",
+		"genero": "Masculino",
+		"email": "brunovick@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Netox Netolas",
+		"genero": "Masculino",
+		"email": "netoxnetolas@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Tio Rafa",
+		"genero": "Masculino",
+		"email": "tiorafa@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Guidinha",
+		"genero": "Feminino",
+		"email": "guidinha@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Fefa",
+		"genero": "Feminino",
+		"email": "fefa@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Nela",
+		"genero": "Feminino",
+		"email": "nela@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Rodé",
+		"genero": "Feminino",
+		"email": "rode@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Urucutcho",
+		"genero": "Masculino",
+		"email": "urucutcho@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Marcelina (Life)",
+		"genero": "Feminino",
+		"email": "marcelinalife@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Bebucha (Abobse)",
+		"genero": "Feminino",
+		"email": "bebuchaabobse@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Horácio Jaione",
+		"genero": "Masculino",
+		"email": "horaciojaione@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Jorge (Bojí)",
+		"genero": "Masculino",
+		"email": "jorgeboji@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Evânia Noémia",
+		"genero": "Feminino",
+		"email": "evanianoemia@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Eliete Vilinga",
+		"genero": "Feminino",
+		"email": "elietevilinga@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Cliana Malange",
+		"genero": "Feminino",
+		"email": "clianamalange@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Cristina",
+		"genero": "Feminino",
+		"email": "cristina@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Célcia",
+		"genero": "Feminino",
+		"email": "celcia@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Emiliana",
+		"genero": "Feminino",
+		"email": "emiliana@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Armelindo",
+		"genero": "Masculino",
+		"email": "armelindo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Belger",
+		"genero": "Masculino",
+		"email": "belger@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Jesus (UCAN)",
+		"genero": "Masculino",
+		"email": "jesusucan@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Neusa",
+		"genero": "Feminino",
+		"email": "neusa@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Cebola",
+		"genero": "Masculino",
+		"email": "cebola@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Erivelto Clénio",
+		"genero": "Masculino",
+		"email": "eriveltoclenio@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Cleidinir Adriano",
+		"genero": "Masculino",
+		"email": "cleidiniradriano@gmail.com"
+	},
+	{
+		"nome": "Jonas",
+		"genero": "Masculino",
+		"email": "jonas@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Bruno (Tidado)",
+		"genero": "Masculino",
+		"email": "brunotidado@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Cabila",
+		"genero": "Masculino",
+		"email": "cabila@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Mucazo",
+		"genero": "Masculino",
+		"email": "mucazo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Sérgio Nonó",
+		"genero": "Masculino",
+		"email": "sergionono@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Ginga",
+		"genero": "Feminino",
+		"email": "ginga@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Elsa",
+		"genero": "Feminino",
+		"email": "elsa@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Sara",
+		"genero": "Feminino",
+		"email": "sara@gmail.com",
+	    "senha":"12345678"
+	},	
+	{
+		"nome": "Maura Lituai",
+		"genero": "Feminino",
+		"email": "mauralituai@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Diolinda Tchiyuca",
+		"genero": "Feminino",
+		"email": "diolindatchiyuca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Sara Tchiyuca",
+		"genero": "Feminino",
+		"email": "saratchiyuca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Adriana",
+		"genero": "Feminino",
+		"email": "adriana@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Belamino (Bairo Muxicano)",
+		"genero": "Masculino",
+		"email": "belaminomuxicano@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Jerónimo (Pipo Choque)",
+		"genero": "Masculino",
+		"email": "jeronimo@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "NGA (Mussende)",
+		"genero": "Masculino",
+		"email": "ngamussende@gmail.com",
+	    "senha":"12345678"
+	},	
+	{
+		"nome": "Alex Tchiyuca",
+		"genero": "Masculino",
+		"email": "alextchiyuca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Jamba Tchiyuca",
+		"genero": "Masculino",
+		"email": "jambatchiyuca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Cristo Tchiyuca",
+		"genero": "Masculino",
+		"email": "cristotchiyuca@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Gerônimo (Pito Choque)",
+		"genero": "Masculino",
+		"email": "geronimoputochoque@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Sara (Nevez)",
+		"genero": "Feminino",
+		"email": "saranevez@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Wisma",
+		"genero": "Masculino",
+		"email": "wisma@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Chica",
+		"genero": "Feminino",
+		"email": "chica@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Laura",
+		"genero": "Feminino",
+		"email": "laura@gmail.com",
+	    "senha":"12345678"
+	},
+	{
+		"nome": "Bebucho (Nela)",
+		"genero": "Masculino",
+		"email": "bebuchonela@gmail.com",
+	    "senha":"12345678"
+	}
+]
