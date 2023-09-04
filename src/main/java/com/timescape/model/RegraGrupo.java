@@ -1,9 +1,11 @@
 package com.timescape.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
-import org.hibernate.annotations.Check;
+import org.hibernate.Length;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -20,6 +22,7 @@ import com.timescape.model.converter.PrivacidadeConverter;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,9 +31,6 @@ import jakarta.persistence.Index;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -42,47 +42,35 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(Include.NON_NULL)
-@JsonClassDescription("formacaoFaculdade")
-@Check(constraints = "dataInicio < dataConclusao" )
-@JsonRootName(value = "formacaoFaculdade", namespace = "formacoesFaculdades")
-@JsonPropertyOrder({"id","faculdade","especialidade","concluiu","dataInicio","dataConclusao","privacidade"})
-@Table(
-	name = "formacoes_faculdades", 
-	indexes = @Index(name = "idx_formacoes_faculdades_usuario_id", columnList = "usuario_id"),
-	uniqueConstraints = @UniqueConstraint(name = "uk_formacoes_faculdades_faculdade_usuario_id", columnNames = {"faculdade","usuario_id",})
-)
-public class FormacaoFaculdade {
+@JsonClassDescription("regraGrupo")
+@JsonRootName(value = "regraGrupo", namespace = "regraGrupos")
+@JsonPropertyOrder({"id","descricao","fixa","dataCricao","privacidade"})
+@Table(name = "regras_grupos", indexes = @Index(name = "uk_regras_grupos_grupo_id", columnList = "grupo_id"))
+public class RegraGrupo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID id;
 
-	@Column(length = 100, nullable = false)
-	@NotBlank(message = "{TrabalhoUsuario.nome.notblank}")
-	@Size(max = 100, message = "{TrabalhoUsuario.noma.size}")
-	private String faculdade;
+	@Column(length = Length.LONG32, nullable = false)
+	private String descricao;
 
-	@Column(length = 100, nullable = false)
-	@Size(max = 100, message = "{FormacaoFaculdade.especialidade.size}")
-	private String especialidade;
-
+	@ColumnDefault("false")
 	@Column(nullable = false)
-	private Boolean concluiu;
+	private Boolean fixa;
 
-	@Column(name = "data_inicio")
+	@CreationTimestamp
 	@JsonFormat(locale = "AO", shape = Shape.STRING)
-	private LocalDate dataInicio;
-	
-	@Column(name = "data_conclusao")
-	@JsonFormat(locale = "AO", shape = Shape.STRING)
-	private LocalDate dataConclusao;
+	@Column(name = "data_cricao", nullable = false, insertable = false, updatable = false)
+	private LocalDateTime dataCricao;
 	
 	@Convert(converter = PrivacidadeConverter.class)
 	@Column(name = "privacidade", length = 20, nullable = false)
 	private Privacidade privacidade;
 
-	@ManyToOne
 	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	@JoinColumn(name = "usuario_id", referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "fk_formacao_faculdade_usuario"))
-	private Usuario usuario;
+	@JoinColumn(name = "grupo_id", referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "fk_regra_grupo_grupo"))
+	private Grupo grupo;
+
 }

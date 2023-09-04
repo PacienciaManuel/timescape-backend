@@ -1,7 +1,6 @@
 package com.timescape.service;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +29,7 @@ public class UsuarioService {
 	@Autowired
 	private final UsuarioRepository usuarioRepository;
 
+	@SuppressWarnings("unused")
 	@Autowired
 	private final StorageService storageService;
 
@@ -77,15 +77,15 @@ public class UsuarioService {
 	
 	public Usuario updatePhoto(Long idUsuario, @RequestParam("fotoPefil") MultipartFile file) {
 		Usuario usuario = findById(idUsuario);
-		usuario.setFotoPerfil(storageService.store(file));
+//		usuario.setFotoPerfil(storageService.store(file));
 		return usuarioRepository.save(usuario);
 	}
 	
 	public void delete(Long idUsuario) {
 		Usuario usuario = findById(idUsuario);
 		usuarioRepository.delete(usuario);
-		if (Objects.nonNull(usuario.getFotoPerfil())) {
-			storageService.delete(usuario.getFotoPerfil());
-		}
+//		if (Objects.nonNull(usuario.getFotoPerfil())) {
+//			storageService.delete(usuario.getFotoPerfil());
+//		}
 	}
 }

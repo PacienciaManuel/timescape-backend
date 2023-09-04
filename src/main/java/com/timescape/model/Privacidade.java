@@ -4,26 +4,27 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
+@ToString
 @RequiredArgsConstructor
-public enum TipoPrivacidade {
-	APENAS_EU("Apenas Eu"), AMIGOS("Amigos"), PUBLICO("Público");
+public enum Privacidade {
+	APENAS_EU("Apenas Eu"), 
+	AMIGOS("Amigos"),
+	GRUPO("Grupo"),
+	PUBLICO("Público"),
+	PRIVADO("Privado");
 	
 	@Getter
 	@JsonValue
 	private final String descricao;
 	
-	public static TipoPrivacidade of(String descricao) {
-		for (TipoPrivacidade tipoPrivacidade : TipoPrivacidade.values()) {
+	public static Privacidade of(String descricao) {
+		for (Privacidade tipoPrivacidade : Privacidade.values()) {
 			if (tipoPrivacidade.descricao.equalsIgnoreCase(descricao)) {
 				return tipoPrivacidade;
 			}
 		}
 		throw new IllegalArgumentException("Tipo de privacidade inválida: " + descricao);
-	}
-	
-	@Override
-	public String toString() {
-		return descricao;
 	}
 }

@@ -1,5 +1,7 @@
 package com.timescape.model;
 
+import java.util.UUID;
+
 import com.fasterxml.jackson.annotation.JsonClassDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonRootName;
@@ -9,7 +11,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 import jakarta.validation.constraints.NotBlank;
@@ -25,20 +26,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonClassDescription("paise")
-@JsonPropertyOrder({"id","nome","codigo","telefone"})
 @JsonRootName(value = "pais", namespace = "paises")
+@JsonPropertyOrder({"id","nome","codigo","telefone"})
 @Table(
 	name = "paises",
-	indexes = @Index(name = "idx_pais_nome", columnList = "nome"),
 	uniqueConstraints = {
-		@UniqueConstraint(name = "uk_pais_nome", columnNames = "nome"),
-		@UniqueConstraint(name = "uk_pais_codigo", columnNames = "codigo")
+		@UniqueConstraint(name = "uk_paises_nome", columnNames = "nome"),
+		@UniqueConstraint(name = "uk_paises_codigo", columnNames = "codigo"),
+		@UniqueConstraint(name = "uk_paises_telefone", columnNames = "telefone")
 	}
 )
 public class Pais {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@GeneratedValue(strategy = GenerationType.UUID)
+	private UUID id;
 	
 	@Column(length = 50, nullable = false)
 	@NotBlank(message = "{Pais.nome.notblank}")

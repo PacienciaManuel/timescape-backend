@@ -16,17 +16,15 @@ import com.timescape.model.converter.PrivacidadeConverter;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Index;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -38,30 +36,40 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(Include.NON_NULL)
-@JsonClassDescription("pronome")
-@JsonPropertyOrder({"id","descricao","privacidade"})
-@JsonRootName(value = "pronome", namespace = "pronomes")
+@JsonClassDescription("relacionamento")
+@JsonRootName(value = "relacionamento", namespace = "relacionamentos")
+@JsonPropertyOrder({"id","estadoCivil","privacidade","usuario","parceiro"})
 @Table(
-	name = "pronomes", 
-	uniqueConstraints = @UniqueConstraint(name = "uk_pronomes_descricao_usuario_id", columnNames = {"descricao","usuario_id"})
+	name = "relacionamentos", 
+	indexes = {
+		@Index(name = "idx_relacionamentos_usuario_id", columnList = "usuario_id"),
+		@Index(name = "idx_relacionamentos_parceiro_id", columnList = "parceiro_id"),
+	},
+	uniqueConstraints = @UniqueConstraint(name = "uk_relacionamentos_usuario_id", columnNames = "usuario_id")
 )
-public class Pronome {
+public class Relacionamento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.UUID)
 	private UUID id;
-	
-	@Column(length = 100, nullable = false)
-	@NotBlank(message = "{Pronome.descricao.notblank}")
-	@Size(max = 100, message = "{Pronome.descricao.size}")
-	private String descricao;
+
+	@Convert(converter = PrivacidadeConverter.class)
+	@Column(name = "estado_civil", length = 20, nullable = false)
+	private EstadoCivil estadoCivil;
 	
 	@Convert(converter = PrivacidadeConverter.class)
 	@Column(name = "privacidade", length = 20, nullable = false)
 	private Privacidade privacidade;
 
+	@ManyToOne
 	@JsonIgnore
-	@ManyToOne(fetch = FetchType.LAZY)
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	@JoinColumn(name = "usuario_id", referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "fk_pronome_usuario"))
+	@JoinColumn(name = "usuario_id", referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "fk_relacionamento_usuario"))
 	private Usuario usuario;
+	
+	@ManyToOne
+	@JsonIgnore
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	@JoinColumn(name = "parceiro_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_relacionamento_parceiro"))
+	private Usuario parceiro;
+
 }

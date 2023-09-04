@@ -1,5 +1,3 @@
-storage:
-  location: upload
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -22,4 +20,9 @@ spring:
   web:
     resources:
       static-locations: file:upload
-        
+jwt:
+  secret: ab77c860-5327-40bc-9cd1-9ac2372fa77a
+  expiration: 3600000
+  expiration-refresh: 86400000
+storage:
+  location: upload

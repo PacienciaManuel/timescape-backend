@@ -1,6 +1,7 @@
 package com.timescape.model;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 import org.hibernate.Length;
 import org.hibernate.annotations.ColumnDefault;
@@ -15,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonRootName;
-import com.timescape.model.converter.TipoPrivacidadeConverter;
+import com.timescape.model.converter.PrivacidadeConverter;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
@@ -43,12 +44,12 @@ import lombok.NoArgsConstructor;
 @JsonInclude(Include.NON_NULL)
 @JsonClassDescription("trabalhoUsuario")
 @JsonRootName(value = "trabalhoUsuario", namespace = "trabalhosUsuario")
-@JsonPropertyOrder({"id","nome","genero","dataNascimento","fotoPerfil","senha"})
-@Table(name = "trabalhos_usuarios", uniqueConstraints = @UniqueConstraint(name = "uk_nome_perfil_usuario_id", columnNames = {"nome","perfil_usuario_id",}))
+@JsonPropertyOrder({"id","nome","cargo","localidade","trabalhando","dataInicio","dataFim","privacidade"})
+@Table(name = "trabalhos_usuarios", uniqueConstraints = @UniqueConstraint(name = "uk_trabalhos_usuarios_nome_usuario_id", columnNames = {"nome","usuario_id",}))
 public class TrabalhoUsuario {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@GeneratedValue(strategy = GenerationType.UUID)
+	private UUID id;
 
 	@Column(length = 100, nullable = false)
 	@NotBlank(message = "{TrabalhoUsuario.nome.notblank}")
@@ -78,13 +79,13 @@ public class TrabalhoUsuario {
 	@JsonFormat(locale = "AO", shape = Shape.STRING)
 	private LocalDate dataFim;
 	
-	@Column(length = 20, nullable = false)
-	@Convert(converter = TipoPrivacidadeConverter.class)
-	private TipoPrivacidade tipoPrivacidade;
+	@Convert(converter = PrivacidadeConverter.class)
+	@Column(name = "privacidade", length = 20, nullable = false)
+	private Privacidade privacidade;
 
 	@ManyToOne
 	@JsonIgnore
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	@JoinColumn(name = "perfil_usuario_id", referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "fk_trabalho_usuario_perfil_usuario"))
-	private PerfilUsuario perfilUsuario;
+	@JoinColumn(name = "usuario_id", referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "fk_trabalho_usuario_usuario"))
+	private Usuario usuario;
 }
